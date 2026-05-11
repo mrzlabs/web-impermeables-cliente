@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+/* MRZ MODAL */
+.mrz-modal{position:fixed;<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -222,6 +223,23 @@ footer{background:var(--ink);padding:52px 24px 24px;}
 .fbot{padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
 .fbot p{font-size:12px;color:rgba(255,255,255,.25);}
 .mrz{border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.4);font-size:11px;font-weight:600;padding:4px 12px;border-radius:100px;}
+
+/* MRZ MODAL */
+.mrz-modal{position:fixed;inset:0;z-index:500;display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;pointer-events:none;transition:opacity .3s;}
+.mrz-modal.show{opacity:1;pointer-events:all;}
+.mrz-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.6);backdrop-filter:blur(6px);}
+.mrz-card{position:relative;background:var(--ink);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:40px;max-width:420px;width:100%;text-align:center;transform:translateY(20px);transition:transform .3s;}
+.mrz-modal.show .mrz-card{transform:translateY(0);}
+.mrz-logo{font-family:'Syne',sans-serif;font-size:32px;font-weight:800;color:var(--white);letter-spacing:-1px;margin-bottom:4px;}
+.mrz-logo span{color:var(--orange);}
+.mrz-tag{display:inline-block;background:rgba(249,115,22,.12);color:var(--orange);border:1px solid rgba(249,115,22,.25);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:100px;margin-bottom:20px;}
+.mrz-card p{font-size:14px;color:rgba(255,255,255,.55);line-height:1.8;margin-bottom:24px;}
+.mrz-links{display:flex;flex-direction:column;gap:8px;margin-bottom:24px;}
+.mrz-link{display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:var(--r);padding:11px 16px;text-decoration:none;color:rgba(255,255,255,.7);font-size:13px;font-weight:500;transition:border-color .2s,color .2s;}
+.mrz-link:hover{border-color:var(--orange);color:var(--white);}
+.mrz-link svg{width:14px;height:14px;opacity:.5;}
+.mrz-close{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.5);font-size:13px;padding:9px 24px;border-radius:var(--r);cursor:pointer;font-family:'Inter',sans-serif;transition:background .2s;}
+.mrz-close:hover{background:rgba(255,255,255,.1);}
 
 /* FLOAT WA */
 .wa{position:fixed;bottom:24px;right:24px;z-index:199;width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);text-decoration:none;transition:transform .2s;}
@@ -734,16 +752,40 @@ footer{background:var(--ink);padding:52px 24px 24px;}
     </div>
     <div class="fbot">
       <p>© 2025 ImpermeCo · NIT [XXX.XXX.XXX-X] · Bogotá D.C.</p>
-      <span class="mrz">Built by mrzlabs</span>
+      <span class="mrz" onclick="showMrz()" style="cursor:pointer;">Built by mrzlabs</span>
     </div>
   </div>
 </footer>
+
+<!-- MRZ EASTER EGG MODAL -->
+<div class="mrz-modal" id="mrzModal" onclick="closeMrz(event)">
+  <div class="mrz-backdrop"></div>
+  <div class="mrz-card">
+    <div class="mrz-logo">mrz<span>labs</span></div>
+    <div class="mrz-tag">Soluciones digitales de fondo</div>
+    <p>Diseñamos y construimos infraestructura digital escalable para negocios que quieren crecer con propósito. Arquitectura progresiva, seguridad real y acompañamiento que genera resultados.</p>
+    <div class="mrz-links">
+      <a class="mrz-link" href="https://github.com/mrzlabs" target="_blank">
+        <span>🐙 github.com/mrzlabs</span>
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 11L11 3M5 3h6v6"/></svg>
+      </a>
+      <a class="mrz-link" href="https://wa.me/573000000000" target="_blank">
+        <span>💬 Hablemos de tu proyecto</span>
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 11L11 3M5 3h6v6"/></svg>
+      </a>
+    </div>
+    <button class="mrz-close" onclick="closeMrz()">Cerrar</button>
+  </div>
+</div>
 
 <a class="wa" href="https://wa.me/573000000000" target="_blank">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.121 1.532 5.853L.057 23.077a.75.75 0 0 0 .866.948l5.444-1.432A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 0 1-4.964-1.363l-.356-.213-3.69.97.986-3.601-.232-.371A9.718 9.718 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
 </a>
 
 <script>
+function showMrz(){document.getElementById('mrzModal').classList.add('show');}
+function closeMrz(e){if(!e||e.target===document.getElementById('mrzModal')||e.currentTarget===document.querySelector('.mrz-close'))document.getElementById('mrzModal').classList.remove('show');}
+
 // NAV
 window.addEventListener('scroll',()=>document.getElementById('nav')?.classList.toggle('s',scrollY>40));
 
