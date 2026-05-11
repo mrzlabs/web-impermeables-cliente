@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Fabricantes de impermeables industriales e institucionales en Bogotá. Proveedores SECOP, Acueducto de Bogotá. Cotización inmediata.">
+<title>[EMPRESA] — Impermeables Industriales Colombia</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --ink:#08090c;
+  --off:#111318;
+  --panel:#16191f;
+  --border:rgba(255,255,255,.07);
+  --blue:#0052cc;
+  --rain:#2563eb;
+  --hi:#f97316;
+  --dim:rgba(255,255,255,.38);
+  --body:rgba(255,255,255,.65);
+  --white:#fff;
+  --r:6px;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--ink);color:var(--body);-webkit-font-smoothing:antialiased;}
+
+/* NAV */
+nav{position:fixed;inset:0 0 auto;z-index:99;border-bottom:1px solid transparent;transition:.3s;}
+nav.s{background:rgba(8,9,12,.92);backdrop-filter:blur(16px);border-color:var(--border);}
+.nw{max-width:1160px;margin:0 auto;padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between;}
+.logo{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:var(--white);letter-spacing:-.5px;text-decoration:none;}
+.logo b{color:var(--hi);}
+.nl{display:flex;gap:28px;list-style:none;}
+.nl a{color:var(--dim);font-size:13px;text-decoration:none;transition:color .2s;}
+.nl a:hover{color:var(--white);}
+.nbtn{background:var(--hi);color:var(--white);padding:8px 20px;border-radius:var(--r);font-size:13px;font-weight:600;text-decoration:none;}
+
+/* HERO */
+.hero{min-height:100svh;display:grid;grid-template-columns:1fr 1fr;align-items:center;max-width:1160px;margin:0 auto;padding:100px 28px 60px;gap:80px;}
+.h-tag{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--border);color:var(--dim);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:28px;}
+.h-tag span{width:6px;height:6px;background:var(--hi);border-radius:50%;display:block;}
+h1{font-family:'Syne',sans-serif;font-size:62px;font-weight:800;color:var(--white);line-height:.98;letter-spacing:-3px;margin-bottom:24px;}
+h1 i{color:var(--hi);font-style:normal;}
+h1 s{color:var(--dim);text-decoration:none;font-weight:400;}
+.hdesc{font-size:15px;line-height:1.8;max-width:440px;margin-bottom:36px;}
+.hbtns{display:flex;gap:10px;margin-bottom:56px;}
+.ba{background:var(--white);color:var(--ink);padding:13px 26px;border-radius:var(--r);font-size:13px;font-weight:700;text-decoration:none;font-family:'Inter',sans-serif;}
+.bb{border:1px solid var(--border);color:var(--body);padding:13px 26px;border-radius:var(--r);font-size:13px;text-decoration:none;}
+.hstats{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);border-radius:10px;overflow:hidden;}
+.hs{padding:20px 22px;border-right:1px solid var(--border);}
+.hs:last-child{border:none;}
+.hsn{font-family:'Syne',sans-serif;font-size:32px;font-weight:800;color:var(--white);letter-spacing:-1.5px;}
+.hsn span{color:var(--hi);}
+.hsl{font-size:11px;color:var(--dim);margin-top:4px;}
+
+/* HERO RIGHT — SVG visual */
+.hright{position:relative;}
+.hcard{background:var(--panel);border:1px solid var(--border);border-radius:16px;overflow:hidden;}
+.hcard-top{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
+.hcard-top span{font-size:11px;color:var(--dim);letter-spacing:1px;text-transform:uppercase;}
+.live{display:flex;align-items:center;gap:5px;font-size:11px;color:#22c55e;}
+.live i{width:6px;height:6px;background:#22c55e;border-radius:50%;display:block;animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
+.hrows{padding:4px 0;}
+.hr{display:flex;align-items:center;gap:14px;padding:13px 20px;border-bottom:1px solid var(--border);transition:background .2s;cursor:default;}
+.hr:last-child{border:none;}
+.hr:hover{background:rgba(255,255,255,.03);}
+.hrico{width:42px;height:42px;border-radius:8px;background:rgba(37,99,235,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.hrname{font-size:13px;font-weight:500;color:var(--white);}
+.hrref{font-size:11px;color:var(--dim);margin-top:2px;}
+.hrbadge{font-size:10px;font-weight:700;padding:3px 9px;border-radius:100px;margin-left:auto;}
+.bg{background:rgba(34,197,94,.12);color:#4ade80;}
+.bo{background:rgba(249,115,22,.12);color:#fb923c;}
+
+/* DIVIDER */
+.div-full{border-top:1px solid var(--border);margin:0 auto;}
+
+/* SECTION BASE */
+.sec{padding:88px 28px;max-width:1160px;margin:0 auto;}
+.ey{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--hi);margin-bottom:12px;}
+h2{font-family:'Syne',sans-serif;font-size:42px;font-weight:800;color:var(--white);letter-spacing:-1.5px;line-height:1.05;margin-bottom:14px;}
+.sub{font-size:15px;line-height:1.8;max-width:520px;}
+.line{width:40px;height:3px;background:var(--hi);border-radius:4px;margin:16px 0 0;}
+
+/* NOSOTROS */
+.ngrid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;margin-top:56px;}
+.flist{display:flex;flex-direction:column;}
+.frow{display:flex;gap:16px;align-items:flex-start;padding:22px 0;border-bottom:1px solid var(--border);}
+.frow:last-child{border:none;padding-bottom:0;}
+.frow:first-child{padding-top:0;}
+.fico{width:40px;height:40px;background:var(--panel);border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.fh{font-size:14px;font-weight:600;color:var(--white);margin-bottom:4px;}
+.fp{font-size:13px;line-height:1.65;}
+.cert{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:32px;}
+.cert-lbl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--dim);margin-bottom:18px;}
+.crows{display:flex;flex-direction:column;gap:8px;}
+.crow{display:flex;align-items:center;gap:10px;border:1px solid var(--border);border-radius:8px;padding:10px 14px;}
+.cdot{width:5px;height:5px;background:var(--hi);border-radius:50%;flex-shrink:0;}
+.crow span{font-size:13px;color:var(--body);}
+
+/* CATALOGO */
+.catsec{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--off);}
+.catinner{max-width:1160px;margin:0 auto;padding:88px 28px;}
+.cathead{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:36px;flex-wrap:wrap;gap:20px;}
+.filters{display:flex;gap:6px;flex-wrap:wrap;}
+.fi{background:transparent;border:1px solid var(--border);color:var(--dim);font-size:12px;font-weight:500;padding:7px 16px;border-radius:100px;cursor:pointer;transition:all .2s;font-family:'Inter',sans-serif;}
+.fi.on,.fi:hover{background:var(--white);border-color:var(--white);color:var(--ink);}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.cc{background:var(--panel);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color .25s,transform .25s;}
+.cc:hover{border-color:rgba(255,255,255,.18);transform:translateY(-3px);}
+.ccimg{height:190px;display:flex;align-items:center;justify-content:center;position:relative;border-bottom:1px solid var(--border);}
+.cclbl{position:absolute;top:12px;left:12px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:100px;}
+.li{background:rgba(37,99,235,.15);color:#60a5fa;}
+.ln{background:rgba(34,197,94,.1);color:#4ade80;}
+.lh{background:rgba(249,115,22,.12);color:#fb923c;}
+.lk{background:rgba(168,85,247,.1);color:#c084fc;}
+.ccb{padding:18px 20px;}
+.cch{font-size:14px;font-weight:600;color:var(--white);margin-bottom:4px;}
+.ccr{font-size:11px;color:var(--dim);margin-bottom:10px;}
+.ccp{font-size:13px;line-height:1.6;}
+.ccf{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-top:1px solid var(--border);}
+.price{font-size:16px;font-weight:700;color:var(--white);font-family:'Syne',sans-serif;}
+.price small{display:block;font-size:10px;color:var(--dim);font-family:'Inter',sans-serif;font-weight:400;margin-bottom:2px;}
+.bcot{background:var(--hi);color:var(--white);font-size:12px;font-weight:600;padding:8px 16px;border-radius:var(--r);border:none;cursor:pointer;font-family:'Inter',sans-serif;transition:filter .2s;}
+.bcot:hover{filter:brightness(1.1);}
+
+/* LICIT */
+.lsec{border-bottom:1px solid var(--border);}
+.lgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:52px;}
+.lcard{border:1px solid var(--border);border-radius:12px;padding:24px;transition:border-color .2s;}
+.lcard:hover{border-color:var(--hi);}
+.lico{width:44px;height:44px;background:var(--panel);border:1px solid var(--border);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+.lcard h3{font-size:14px;font-weight:600;color:var(--white);margin-bottom:8px;font-family:'Syne',sans-serif;}
+.lcard p{font-size:13px;line-height:1.65;}
+.cpills{margin-top:48px;padding-top:40px;border-top:1px solid var(--border);}
+.cplabel{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--dim);margin-bottom:16px;}
+.pills{display:flex;flex-wrap:wrap;gap:8px;}
+.pill{border:1px solid var(--border);border-radius:100px;padding:7px 16px;font-size:13px;color:var(--dim);}
+
+/* SISTEMA */
+.sssec{background:var(--off);border-top:1px solid var(--border);}
+.ssinner{max-width:1160px;margin:0 auto;padding:88px 28px;}
+.ssgrid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;margin-top:56px;}
+.sslist{display:flex;flex-direction:column;gap:0;}
+.ssrow{display:flex;gap:14px;align-items:flex-start;padding:22px 0;border-bottom:1px solid var(--border);}
+.ssrow:last-child{border:none;}
+.ssnum{font-family:'Syne',sans-serif;font-size:13px;font-weight:800;color:var(--hi);width:28px;flex-shrink:0;padding-top:2px;}
+.ssh{font-size:14px;font-weight:600;color:var(--white);margin-bottom:4px;}
+.ssp{font-size:13px;line-height:1.65;}
+.sstag{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.5px;padding:2px 8px;border-radius:4px;margin-bottom:6px;background:rgba(249,115,22,.1);color:var(--hi);}
+/* pricing card */
+.pcard{background:var(--panel);border:1px solid var(--border);border-radius:16px;overflow:hidden;position:sticky;top:84px;}
+.pchead{padding:28px 28px 24px;border-bottom:1px solid var(--border);}
+.pchead .ey{margin-bottom:8px;}
+.pchead h3{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--white);letter-spacing:-.5px;}
+.pchead p{font-size:13px;margin-top:8px;line-height:1.6;}
+.pcbody{padding:24px 28px;}
+.pcrow{display:flex;justify-content:space-between;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--border);}
+.pcrow:last-child{border:none;}
+.pcrk{font-size:13px;color:var(--body);}
+.pcrv{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:var(--white);text-align:right;}
+.pcrv small{display:block;font-size:11px;color:var(--dim);font-family:'Inter',sans-serif;font-weight:400;}
+.pcfoot{padding:24px 28px;border-top:1px solid var(--border);background:rgba(249,115,22,.05);}
+.pcfoot p{font-size:12px;line-height:1.7;color:var(--dim);}
+.pcfoot strong{color:var(--white);}
+
+/* CONTACTO */
+.cgrid2{display:grid;grid-template-columns:1fr 400px;gap:60px;align-items:start;margin-top:52px;}
+.fcard{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:32px;}
+.fcard h3{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:var(--white);margin-bottom:6px;}
+.fcard p{font-size:13px;margin-bottom:26px;line-height:1.6;}
+.fg{margin-bottom:14px;}
+.fg label{display:block;font-size:11px;font-weight:600;color:var(--dim);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;}
+.fg input,.fg select,.fg textarea{width:100%;padding:11px 14px;background:var(--ink);border:1px solid var(--border);border-radius:var(--r);font-size:14px;font-family:'Inter',sans-serif;color:var(--white);outline:none;transition:border-color .2s;}
+.fg input:focus,.fg select,.fg textarea:focus{border-color:rgba(255,255,255,.25);}
+.fg select option{background:var(--ink);}
+.fg textarea{resize:vertical;min-height:86px;}
+.fgr{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.bsend{width:100%;background:var(--white);color:var(--ink);padding:13px;border:none;border-radius:var(--r);font-size:14px;font-weight:700;cursor:pointer;font-family:'Syne',sans-serif;margin-top:6px;transition:opacity .2s;}
+.bsend:hover{opacity:.88;}
+.cside h3{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:var(--white);margin-bottom:24px;}
+.cilist{display:flex;flex-direction:column;gap:16px;}
+.cirow{display:flex;gap:14px;}
+.ciico{width:38px;height:38px;background:var(--panel);border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.cih{font-size:13px;font-weight:600;color:var(--white);margin-bottom:2px;}
+.cip{font-size:13px;line-height:1.5;}
+.wbox{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:20px;margin-top:24px;display:flex;align-items:center;gap:14px;}
+.wbox div strong{display:block;font-size:14px;color:var(--white);margin-bottom:3px;}
+.wbox div p{font-size:12px;line-height:1.5;}
+.wbtn{background:#25D366;color:#fff;padding:10px 18px;border-radius:var(--r);font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap;flex-shrink:0;}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:48px 28px 24px;background:var(--off);}
+.fw{max-width:1160px;margin:0 auto;}
+.ftop{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid var(--border);}
+.fbrand p{font-size:13px;margin-top:12px;line-height:1.7;}
+.fcol h4{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--dim);margin-bottom:14px;}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.fcol a{color:var(--dim);font-size:13px;text-decoration:none;transition:color .2s;}
+.fcol a:hover{color:var(--white);}
+.fbot{padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+.fbot p{font-size:12px;}
+.mrztag{border:1px solid var(--border);color:var(--dim);font-size:11px;font-weight:600;padding:4px 12px;border-radius:100px;}
+
+/* FLOAT */
+.wa{position:fixed;bottom:24px;right:24px;z-index:200;width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.35);text-decoration:none;transition:transform .2s;}
+.wa:hover{transform:scale(1.1);}
+.wa svg{width:24px;height:24px;fill:white;}
+
+@media(max-width:880px){
+  .hero,.ngrid,.ssgrid,.cgrid2{grid-template-columns:1fr;}
+  .hright{display:none;}
+  h1{font-size:38px;}
+  .cgrid,.lgrid{grid-template-columns:1fr 1fr;}
+  .ftop{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:540px){.cgrid,.lgrid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nw">
+    <a href="#" class="logo">[EMPRESA]<b>.</b></a>
+    <ul class="nl">
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#catalogo">Catálogo</a></li>
+      <li><a href="#licitaciones">Licitaciones</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a href="#contacto" class="nbtn">Cotizar ahora</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <div class="h-tag"><span></span>Fabricación industrial · Bogotá, Colombia</div>
+    <h1><s>Dotación</s><br>que protege<br><i>en serio.</i></h1>
+    <p class="hdesc">Fabricamos impermeables para entidades públicas y privadas a escala nacional. Experiencia probada en SECOP, Acueducto de Bogotá y más de 40 contratos adjudicados.</p>
+    <div class="hbtns">
+      <a href="#catalogo" class="ba">Ver catálogo →</a>
+      <a href="#contacto" class="bb">Solicitar cotización</a>
+    </div>
+    <div class="hstats">
+      <div class="hs"><div class="hsn">50K<span>+</span></div><div class="hsl">Unidades / año</div></div>
+      <div class="hs"><div class="hsn">15<span>+</span></div><div class="hsl">Años de experiencia</div></div>
+      <div class="hs"><div class="hsn">40<span>+</span></div><div class="hsl">Contratos públicos</div></div>
+    </div>
+  </div>
+  <div class="hright">
+    <div class="hcard">
+      <div class="hcard-top">
+        <span>Stock activo 2025</span>
+        <div class="live"><i></i>En línea</div>
+      </div>
+      <div class="hrows">
+        <!-- IMPERMEABLE SVG 1 -->
+        <div class="hr">
+          <div class="hrico">
+            <svg width="26" height="30" viewBox="0 0 26 30" fill="none">
+              <path d="M13 2L3 8v2c2 -1 4 0 5 1.5C19 5 23 9 23 10V8Z" fill="#2563eb" opacity=".8"/>
+              <rect x="8" y="10" width="10" height="18" rx="2" fill="#3b82f6"/>
+              <rect x="11" y="10" width="4" height="7" rx="1" fill="#1d4ed8" opacity=".6"/>
+            </svg>
+          </div>
+          <div>
+            <div class="hrname">Impermeable Institucional</div>
+            <div class="hrref">REF: IMP-INST-001 · XS–3XL</div>
+          </div>
+          <span class="hrbadge bg">Stock</span>
+        </div>
+        <!-- IMPERMEABLE SVG 2 -->
+        <div class="hr">
+          <div class="hrico">
+            <svg width="26" height="30" viewBox="0 0 26 30" fill="none">
+              <path d="M13 2L3 8v2c2-1 4 0 5 1.5C19 5 23 9 23 10V8Z" fill="#16a34a" opacity=".8"/>
+              <rect x="8" y="10" width="10" height="12" rx="2" fill="#22c55e"/>
+              <rect x="3" y="10" width="5" height="16" rx="2" fill="#16a34a"/>
+              <rect x="18" y="10" width="5" height="16" rx="2" fill="#16a34a"/>
+            </svg>
+          </div>
+          <div>
+            <div class="hrname">Capotín Industrial 2 piezas</div>
+            <div class="hrref">REF: CAP-IND-003 · S–2XL</div>
+          </div>
+          <span class="hrbadge bg">Stock</span>
+        </div>
+        <!-- IMPERMEABLE SVG 3 — alta vis -->
+        <div class="hr">
+          <div class="hrico">
+            <svg width="26" height="30" viewBox="0 0 26 30" fill="none">
+              <path d="M13 2L3 8v2c2-1 4 0 5 1.5C19 5 23 9 23 10V8Z" fill="#d97706" opacity=".8"/>
+              <rect x="3" y="10" width="20" height="16" rx="2" fill="#f59e0b"/>
+              <rect x="2" y="19" width="22" height="3" rx="1" fill="white" opacity=".85"/>
+              <rect x="2" y="23" width="22" height="3" rx="1" fill="white" opacity=".85"/>
+            </svg>
+          </div>
+          <div>
+            <div class="hrname">Alta Visibilidad EN-471</div>
+            <div class="hrref">REF: IMP-AV-012 · S–3XL</div>
+          </div>
+          <span class="hrbadge bo">Pedido</span>
+        </div>
+        <!-- KIT -->
+        <div class="hr">
+          <div class="hrico">
+            <svg width="26" height="30" viewBox="0 0 26 30" fill="none">
+              <path d="M13 2L3 8v2c2-1 4 0 5 1.5C19 5 23 9 23 10V8Z" fill="#7c3aed" opacity=".8"/>
+              <rect x="8" y="10" width="10" height="10" rx="2" fill="#8b5cf6"/>
+              <rect x="8" y="20" width="4" height="8" rx="2" fill="#7c3aed"/>
+              <rect x="14" y="20" width="4" height="8" rx="2" fill="#7c3aed"/>
+            </svg>
+          </div>
+          <div>
+            <div class="hrname">Kit Lluvia Operativo 3 pzs</div>
+            <div class="hrref">REF: KIT-OPR-007 · S–2XL</div>
+          </div>
+          <span class="hrbadge bg">Stock</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="div-full"></div>
+
+<!-- NOSOTROS -->
+<div class="sec" id="nosotros">
+  <div class="ey">Quiénes somos</div>
+  <h2>Fabricación nacional<br>a escala institucional</h2>
+  <div class="line"></div>
+  <div class="ngrid">
+    <div>
+      <p class="sub" style="margin-bottom:36px;">Somos una empresa bogotana con más de 15 años fabricando impermeables para el Estado. Conocemos el proceso de contratación estatal de adentro hacia afuera y entregamos a tiempo, en volumen y con calidad probada.</p>
+      <div class="flist">
+        <div class="frow">
+          <div class="fico">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#f97316" stroke-width="1.5">
+              <rect x="2" y="7" width="16" height="11" rx="2"/><path d="M13 7V5a3 3 0 0 0-6 0v2"/>
+            </svg>
+          </div>
+          <div><div class="fh">Planta propia en Bogotá</div><div class="fp">+5.000 unidades/mes. Control de calidad en cada etapa del proceso productivo.</div></div>
+        </div>
+        <div class="frow">
+          <div class="fico">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#f97316" stroke-width="1.5">
+              <path d="M9 11l3 3L18 4"/><path d="M17 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/>
+            </svg>
+          </div>
+          <div><div class="fh">Experiencia SECOP</div><div class="fp">+40 contratos adjudicados. Documentación completa lista para cualquier proceso.</div></div>
+        </div>
+        <div class="frow">
+          <div class="fico">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#f97316" stroke-width="1.5">
+              <circle cx="10" cy="10" r="8"/><polyline points="10 6 10 10 13 12"/>
+            </svg>
+          </div>
+          <div><div class="fh">Entrega garantizada</div><div class="fp">Trazabilidad completa, actas de recibo y cumplimiento contractual sin excepciones.</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="cert">
+      <div class="cert-lbl">Certificaciones y habilitaciones</div>
+      <div class="crows">
+        <div class="crow"><div class="cdot"></div><span>RUT activo — CIIU 1410 Confección</span></div>
+        <div class="crow"><div class="cdot"></div><span>Registro SECOP I y SECOP II</span></div>
+        <div class="crow"><div class="cdot"></div><span>Cámara de Comercio de Bogotá</span></div>
+        <div class="crow"><div class="cdot"></div><span>Proveedor certificado Acueducto de Bogotá</span></div>
+        <div class="crow"><div class="cdot"></div><span>ISO 9001:2015 — Sistemas de gestión</span></div>
+        <div class="crow"><div class="cdot"></div><span>NTC — Normas técnicas colombianas</span></div>
+        <div class="crow"><div class="cdot"></div><span>Ley 80 — Contratación estatal</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CATÁLOGO -->
+<div class="catsec" id="catalogo">
+  <div class="catinner">
+    <div class="cathead">
+      <div>
+        <div class="ey">Catálogo de productos</div>
+        <h2 style="margin-bottom:0;">Líneas disponibles</h2>
+      </div>
+      <div class="filters">
+        <button class="fi on" onclick="fil(this,'all')">Todos</button>
+        <button class="fi" onclick="fil(this,'i')">Institucional</button>
+        <button class="fi" onclick="fil(this,'n')">Industrial</button>
+        <button class="fi" onclick="fil(this,'h')">Alta visibilidad</button>
+        <button class="fi" onclick="fil(this,'k')">Kits</button>
+      </div>
+    </div>
+    <div class="cgrid" id="cg">
+
+      <div class="cc" data-c="i">
+        <div class="ccimg" style="background:rgba(37,99,235,.06);">
+          <svg width="90" height="110" viewBox="0 0 90 110" fill="none">
+            <path d="M45 8L14 26v5c4-2 9-.5 12 2 6-8 26-8 32 0 3-2.5 8-4 12-2v-5Z" fill="#1d4ed8" opacity=".85"/>
+            <rect x="26" y="31" width="38" height="68" rx="4" fill="#2563eb"/>
+            <rect x="37" y="31" width="16" height="22" rx="3" fill="#1e40af" opacity=".5"/>
+            <rect x="26" y="31" width="7" height="68" rx="4 0 0 4" fill="#1d4ed8" opacity=".6"/>
+          </svg>
+          <div class="cclbl li">Institucional</div>
+        </div>
+        <div class="ccb">
+          <div class="cch">Impermeable Institucional Clásico</div>
+          <div class="ccr">REF: IMP-INST-001 · Tallas XS – 3XL</div>
+          <div class="ccp">PVC alta densidad. Colores corporativos con bordado de logo. Dotación operativa para entidades públicas.</div>
+        </div>
+        <div class="ccf">
+          <div class="price"><small>Desde (×50 u.)</small>$38.000</div>
+          <button class="bcot" onclick="cot('Impermeable Institucional Clásico')">Cotizar</button>
+        </div>
+      </div>
+
+      <div class="cc" data-c="n">
+        <div class="ccimg" style="background:rgba(34,197,94,.05);">
+          <svg width="90" height="110" viewBox="0 0 90 110" fill="none">
+            <path d="M45 6L12 26v6c5-2.5 10-.5 14 2.5 5-8 25-8 30 0 4-3 9-4.5 14-2.5v-6Z" fill="#15803d" opacity=".85"/>
+            <rect x="26" y="32" width="38" height="42" rx="3" fill="#16a34a"/>
+            <rect x="8" y="32" width="18" height="60" rx="3" fill="#15803d"/>
+            <rect x="64" y="32" width="18" height="60" rx="3" fill="#15803d"/>
+            <rect x="38" y="32" width="14" height="18" rx="2" fill="#166534" opacity=".5"/>
+          </svg>
+          <div class="cclbl ln">Industrial</div>
+        </div>
+        <div class="ccb">
+          <div class="cch">Capotín Industrial 2 Piezas</div>
+          <div class="ccr">REF: CAP-IND-003 · Tallas S – 2XL</div>
+          <div class="ccp">Costura soldada por ultrasonido. Chaqueta + pantalón. Resistencia a lluvia intensa y viento. Campo y obra civil.</div>
+        </div>
+        <div class="ccf">
+          <div class="price"><small>Desde (×50 u.)</small>$55.000</div>
+          <button class="bcot" onclick="cot('Capotín Industrial 2 Piezas')">Cotizar</button>
+        </div>
+      </div>
+
+      <div class="cc" data-c="h">
+        <div class="ccimg" style="background:rgba(249,115,22,.05);">
+          <svg width="90" height="110" viewBox="0 0 90 110" fill="none">
+            <path d="M45 6L12 26v6c5-2.5 10-.5 14 2.5 5-8 25-8 30 0 4-3 9-4.5 14-2.5v-6Z" fill="#b45309" opacity=".85"/>
+            <rect x="8" y="32" width="74" height="68" rx="3" fill="#d97706"/>
+            <rect x="6" y="68" width="78" height="8" rx="2" fill="white" opacity=".85"/>
+            <rect x="6" y="82" width="78" height="8" rx="2" fill="white" opacity=".85"/>
+          </svg>
+          <div class="cclbl lh">Alta visibilidad</div>
+        </div>
+        <div class="ccb">
+          <div class="cch">Impermeable Alta Visibilidad</div>
+          <div class="ccr">REF: IMP-AV-012 · Tallas S – 3XL</div>
+          <div class="ccp">Cinta reflectiva EN-471 clase 2. Amarillo o naranja flúor. Trabajo nocturno, vial y emergencias. Norma SGSST.</div>
+        </div>
+        <div class="ccf">
+          <div class="price"><small>Desde (×50 u.)</small>$72.000</div>
+          <button class="bcot" onclick="cot('Impermeable Alta Visibilidad EN-471')">Cotizar</button>
+        </div>
+      </div>
+
+      <div class="cc" data-c="i">
+        <div class="ccimg" style="background:rgba(124,58,237,.05);">
+          <svg width="90" height="110" viewBox="0 0 90 110" fill="none">
+            <path d="M45 8L15 27v5c4-2 8-.5 11 2 6-8 23-8 29 0 3-2.5 7-4 11-2v-5Z" fill="#5b21b6" opacity=".85"/>
+            <rect x="28" y="32" width="34" height="70" rx="4" fill="#7c3aed"/>
+            <rect x="37" y="32" width="16" height="24" rx="3" fill="#4c1d95" opacity=".45"/>
+            <line x1="28" y1="62" x2="62" y2="62" stroke="#6d28d9" stroke-width="2"/>
+          </svg>
+          <div class="cclbl li">Institucional</div>
+        </div>
+        <div class="ccb">
+          <div class="cch">Impermeable Ejecutivo Premium</div>
+          <div class="ccr">REF: IMP-EJE-020 · Tallas S – XL</div>
+          <div class="ccp">Forro interior, cierre hermético, capucha ajustable. Para personal directivo y representación institucional.</div>
+        </div>
+        <div class="ccf">
+          <div class="price"><small>Desde (×20 u.)</small>$110.000</div>
+          <button class="bcot" onclick="cot('Impermeable Ejecutivo Premium')">Cotizar</button>
+        </div>
+      </div>
+
+      <div class="cc" data-c="k">
+        <div class="ccimg" style="background:rgba(168,85,247,.05);">
+          <svg width="90" height="110" viewBox="0 0 90 110" fill="none">
+            <path d="M45 6L13 26v5c4-2 9-.5 12 2 5-8 25-8 30 0 3-2.5 8-4 12-2v-5Z" fill="#86198f" opacity=".85"/>
+            <rect x="26" y="31" width="38" height="36" rx="3" fill="#a855f7"/>
+            <rect x="26" y="66" width="17" height="36" rx="3" fill="#9333ea"/>
+            <rect x="47" y="66" width="17" height="36" rx="3" fill="#9333ea"/>
+          </svg>
+          <div class="cclbl lk">Kit completo</div>
+        </div>
+        <div class="ccb">
+          <div class="cch">Kit Lluvia Operativo 3 piezas</div>
+          <div class="ccr">REF: KIT-OPR-007 · Tallas S – 2XL</div>
+          <div class="ccp">Chaqueta + pantalón + botas. Dotación completa para contratos de obra, acueducto y campo. Empaque individual.</div>
+        </div>
+        <div class="ccf">
+          <div class="price"><small>Desde (×30 u.)</small>$145.000</div>
+          <button class="bcot" onclick="cot('Kit Lluvia Operativo 3 piezas')">Cotizar</button>
+        </div>
+      </div>
+
+      <div class="cc" data-c="n">
+        <div class="ccimg" style="background:rgba(239,68,68,.05);">
+          <svg width="90" height="110" viewBox="0 0 90 110" fill="none">
+            <path d="M45 6L13 26v5c4-2 9-.5 12 2 5-8 25-8 30 0 3-2.5 8-4 12-2v-5Z" fill="#991b1b" opacity=".85"/>
+            <rect x="26" y="31" width="38" height="70" rx="3" fill="#dc2626"/>
+            <rect x="8" y="31" width="18" height="70" rx="3" fill="#b91c1c"/>
+            <rect x="64" y="31" width="18" height="70" rx="3" fill="#b91c1c"/>
+            <circle cx="18" cy="42" r="5" fill="#fbbf24" stroke="#92400e" stroke-width="1.5"/>
+            <circle cx="72" cy="42" r="5" fill="#fbbf24" stroke="#92400e" stroke-width="1.5"/>
+            <rect x="6" y="78" width="78" height="6" rx="2" fill="white" opacity=".6"/>
+          </svg>
+          <div class="cclbl ln">Industrial</div>
+        </div>
+        <div class="ccb">
+          <div class="cch">Impermeable Técnico Especializado</div>
+          <div class="ccr">REF: IMP-TEC-031 · Tallas M – 2XL</div>
+          <div class="ccp">Alturas y zonas de riesgo. RETIE certificado. Puntos de anclaje integrados. Costuras selladas al vacío.</div>
+        </div>
+        <div class="ccf">
+          <div class="price"><small>Desde (×20 u.)</small>$180.000</div>
+          <button class="bcot" onclick="cot('Impermeable Técnico Especializado RETIE')">Cotizar</button>
+        </div>
+      </div>
+
+    </div>
+    <p style="font-size:12px;color:var(--dim);text-align:center;margin-top:20px;">Muestra física y ficha técnica sin costo · Pedidos mínimos según referencia</p>
+  </div>
+</div>
+
+<!-- LICITACIONES -->
+<div class="sec lsec" id="licitaciones">
+  <div class="ey">Contratación pública</div>
+  <h2>Experiencia probada<br>en licitaciones</h2>
+  <div class="line"></div>
+  <p class="sub" style="margin-top:16px;">Conocemos la contratación estatal colombiana a fondo. Documentación completa, historial limpio en SECOP I y II y cumplimiento garantizado.</p>
+  <div class="lgrid">
+    <div class="lcard">
+      <div class="lico">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="#f97316" stroke-width="1.5">
+          <path d="M4 5h14M4 10h14M4 15h8"/><circle cx="18" cy="15" r="3"/><path d="M16.8 15l.9.9 1.8-1.8"/>
+        </svg>
+      </div>
+      <h3>Documentación completa</h3>
+      <p>RUT, Cámara de Comercio, estados financieros y capacidad residual listos para cualquier proceso de selección.</p>
+    </div>
+    <div class="lcard">
+      <div class="lico">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="#f97316" stroke-width="1.5">
+          <rect x="2" y="2" width="18" height="18" rx="3"/><path d="M7 11l3 3 5-5"/>
+        </svg>
+      </div>
+      <h3>SECOP I y II activo</h3>
+      <p>Presencia activa en ambas plataformas. Historial de contratos adjudicados y cumplidos sin multas ni sanciones.</p>
+    </div>
+    <div class="lcard">
+      <div class="lico">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="#f97316" stroke-width="1.5">
+          <path d="M20 10c0 6-9 11-9 11S2 16 2 10a9 9 0 0 1 18 0z"/><circle cx="11" cy="10" r="3"/>
+        </svg>
+      </div>
+      <h3>Entrega nacional</h3>
+      <p>Logística a cualquier municipio de Colombia. Trazabilidad de pedido, guías de transporte y actas de recibo.</p>
+    </div>
+    <div class="lcard">
+      <div class="lico">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="#f97316" stroke-width="1.5">
+          <path d="M20 14a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+      </div>
+      <h3>Asesoría en proceso</h3>
+      <p>Acompañamos al comprador en la elaboración de fichas técnicas y pliegos de condiciones.</p>
+    </div>
+  </div>
+  <div class="cpills">
+    <div class="cplabel">Clientes institucionales</div>
+    <div class="pills">
+      <div class="pill">Acueducto de Bogotá</div>
+      <div class="pill">IDU</div>
+      <div class="pill">Alcaldía de Bogotá</div>
+      <div class="pill">Policía Nacional</div>
+      <div class="pill">UAESP</div>
+      <div class="pill">Gobernación de Cundinamarca</div>
+      <div class="pill">Cruz Roja Colombiana</div>
+      <div class="pill">IDRD</div>
+    </div>
+  </div>
+</div>
+
+<!-- SISTEMA — PROPUESTA MRZLABS DENTRO DEL SITIO -->
+<div class="sssec" id="sistema">
+  <div class="ssinner">
+    <div class="ey">Arquitectura digital</div>
+    <h2>Un sistema que crece<br>con su negocio</h2>
+    <div class="line"></div>
+    <p class="sub" style="margin-top:16px;">No es solo una página. Es la infraestructura digital de su empresa — construida para escalar, conectarse a automatizaciones y recibir inversión progresiva sin rehacerse.</p>
+    <div class="ssgrid">
+      <div class="sslist">
+        <div class="ssrow">
+          <div class="ssnum">01</div>
+          <div>
+            <div class="sstag">Hoy — Fase base</div>
+            <div class="ssh">Presencia + captación de leads</div>
+            <div class="ssp">Sitio optimizado para Google Ads, catálogo digital, cotización por WhatsApp y formulario conectado a Google Sheets. Velocidad máxima para campañas pagadas. Google Tag Manager + GA4 desde el día uno.</div>
+          </div>
+        </div>
+        <div class="ssrow">
+          <div class="ssnum">02</div>
+          <div>
+            <div class="sstag">Fase 2 — Automatización</div>
+            <div class="ssh">Leads automáticos y seguimiento</div>
+            <div class="ssp">Los formularios disparan notificaciones automáticas, el Sheet se convierte en CRM básico. WhatsApp Business API para respuestas automáticas. Reportes mensuales de tráfico y conversiones.</div>
+          </div>
+        </div>
+        <div class="ssrow">
+          <div class="ssnum">03</div>
+          <div>
+            <div class="sstag">Fase 3 — E-commerce</div>
+            <div class="ssh">Carrito + pasarela de pagos</div>
+            <div class="ssp">Integración de Wompi o PayU sobre la misma infraestructura. Sin rehacer el sitio. Cumplimiento PCI DSS, SSL estricto, tokenización. Solo cuando el volumen lo justifique.</div>
+          </div>
+        </div>
+        <div class="ssrow">
+          <div class="ssnum">04</div>
+          <div>
+            <div class="sstag">Siempre — Portabilidad</div>
+            <div class="ssh">El sistema es suyo, no nuestro</div>
+            <div class="ssp">Código limpio en repositorio propio del cliente. Documentado. Sobre estándares abiertos. Si en el futuro quieren otro proveedor, pueden continuar sin rehacer todo. Eso es lo que diferencia infraestructura real de una plantilla rentada.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRICING CARD -->
+      <div>
+        <div class="pcard">
+          <div class="pchead">
+            <div class="ey">Modelo de inversión</div>
+            <h3>Estructura de cobro mrzlabs</h3>
+            <p>Pago único por construir el sistema. Acompañamiento mensual opcional por resultados, no por mantenimiento.</p>
+          </div>
+          <div class="pcbody">
+            <div class="pcrow">
+              <div class="pcrk">Setup completo — Fase 1</div>
+              <div class="pcrv">A convenir<small>Pago único · incluye dominio + Ads config</small></div>
+            </div>
+            <div class="pcrow">
+              <div class="pcrk">Contenido inicial</div>
+              <div class="pcrv">A convenir<small>Fichas técnicas, copy SEO, estructura Ads</small></div>
+            </div>
+            <div class="pcrow">
+              <div class="pcrk">Acompañamiento mensual</div>
+              <div class="pcrv">Mensualidad<small>Métricas, ajuste campañas, soporte</small></div>
+            </div>
+            <div class="pcrow">
+              <div class="pcrk">Fases 2 y 3</div>
+              <div class="pcrv">Por hito<small>Solo cuando el negocio lo requiera</small></div>
+            </div>
+          </div>
+          <div class="pcfoot">
+            <p><strong>Sin amarres.</strong> El cliente posee el sistema. Puede continuar con otro proveedor en cualquier momento. La fidelización viene del valor entregado, no de la dependencia técnica.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACTO -->
+<div class="sec" id="contacto">
+  <div class="ey">Contacto y cotizaciones</div>
+  <h2>Solicita tu cotización</h2>
+  <div class="line"></div>
+  <p class="sub" style="margin-top:16px;">Respuesta en menos de 24 horas hábiles. Para licitaciones y pedidos urgentes contáctanos directamente.</p>
+  <div class="cgrid2">
+    <div class="fcard">
+      <h3>Formulario de cotización</h3>
+      <p>Cuéntanos qué necesitas y te respondemos con precios según tu volumen.</p>
+      <div class="fgr">
+        <div class="fg"><label>Nombre</label><input type="text" placeholder="Tu nombre"></div>
+        <div class="fg"><label>Empresa / Entidad</label><input type="text" placeholder="Organización"></div>
+      </div>
+      <div class="fg"><label>Correo</label><input type="email" placeholder="correo@empresa.com.co"></div>
+      <div class="fgr">
+        <div class="fg"><label>Producto</label>
+          <select>
+            <option value="">Selecciona...</option>
+            <option>Impermeable Institucional</option>
+            <option>Capotín Industrial</option>
+            <option>Alta visibilidad EN-471</option>
+            <option>Impermeable Ejecutivo</option>
+            <option>Kit Operativo 3 piezas</option>
+            <option>Impermeable Técnico RETIE</option>
+            <option>Otro / Varios</option>
+          </select>
+        </div>
+        <div class="fg"><label>Cantidad</label>
+          <select>
+            <option>20 – 50 unidades</option>
+            <option>50 – 200 unidades</option>
+            <option>200 – 1.000 unidades</option>
+            <option>+1.000 unidades</option>
+          </select>
+        </div>
+      </div>
+      <div class="fg"><label>Especificaciones</label><textarea placeholder="Tallas, colores, logo, fecha, número de proceso SECOP..."></textarea></div>
+      <button class="bsend" onclick="enviar()">Enviar solicitud →</button>
+    </div>
+    <div class="cside">
+      <h3>Contacto directo</h3>
+      <div class="cilist">
+        <div class="cirow">
+          <div class="ciico">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#f97316" stroke-width="1.4"><path d="M14 10.667a1.333 1.333 0 0 1-1.333 1.333H3.333L1.333 14V3.333A1.333 1.333 0 0 1 2.667 2H12a1.333 1.333 0 0 1 1.333 1.333z"/></svg>
+          </div>
+          <div><div class="cih">Dirección</div><div class="cip">Calle XX # XX-XX, Zona Industrial<br>Bogotá D.C., Colombia</div></div>
+        </div>
+        <div class="cirow">
+          <div class="ciico">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#f97316" stroke-width="1.4"><path d="M1.333 2.667A.667.667 0 0 1 2 2h2.187a.667.667 0 0 1 .632.456l1 3a.667.667 0 0 1-.335.808L4 7a7.38 7.38 0 0 0 5 5l.736-1.484a.667.667 0 0 1 .808-.335l3 1a.667.667 0 0 1 .456.632V14a.667.667 0 0 1-.667.667H12A10.667 10.667 0 0 1 1.333 4z"/></svg>
+          </div>
+          <div><div class="cih">Teléfono</div><div class="cip">+57 (601) 000-0000<br>Lun – Vie · 7:00 am – 5:00 pm</div></div>
+        </div>
+        <div class="cirow">
+          <div class="ciico">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#f97316" stroke-width="1.4"><path d="M2.667 2.667h10.666A1.333 1.333 0 0 1 14.667 4v8a1.333 1.333 0 0 1-1.334 1.333H2.667A1.333 1.333 0 0 1 1.333 12V4a1.333 1.333 0 0 1 1.334-1.333z"/><path d="M14.667 4L8 9.333 1.333 4"/></svg>
+          </div>
+          <div><div class="cih">Correo</div><div class="cip">ventas@[empresa].com.co<br>licitaciones@[empresa].com.co</div></div>
+        </div>
+      </div>
+      <div class="wbox">
+        <div>
+          <strong>WhatsApp comercial</strong>
+          <p>Envía las especificaciones y cotizamos en minutos.</p>
+        </div>
+        <a class="wbtn" href="https://wa.me/573000000000?text=Hola%2C+necesito+cotizar+impermeables" target="_blank">Escribir →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fw">
+    <div class="ftop">
+      <div class="fbrand">
+        <a href="#" class="logo">[EMPRESA]<b>.</b></a>
+        <p>Fabricantes de impermeables industriales e institucionales. Bogotá, Colombia. +15 años proveyendo al Estado colombiano.</p>
+      </div>
+      <div class="fcol">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#licitaciones">Licitaciones</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>Productos</h4>
+        <ul>
+          <li><a href="#catalogo">Institucionales</a></li>
+          <li><a href="#catalogo">Industriales</a></li>
+          <li><a href="#catalogo">Alta visibilidad</a></li>
+          <li><a href="#catalogo">Kits operativos</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacidad</a></li>
+          <li><a href="#">Términos</a></li>
+          <li><a href="#">Garantía</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbot">
+      <p>© 2025 [EMPRESA] · NIT [XXX.XXX.XXX-X] · Bogotá D.C.</p>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span class="mrztag">Built by mrzlabs</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/573000000000" target="_blank">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.121 1.532 5.853L.057 23.077a.75.75 0 0 0 .866.948l5.444-1.432A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 0 1-4.964-1.363l-.356-.213-3.69.97.986-3.601-.232-.371A9.718 9.718 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+</a>
+
+<script>
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('s',scrollY>40));
+
+function fil(btn,cat){
+  document.querySelectorAll('.fi').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('.cc').forEach(c=>{
+    c.style.display=(cat==='all'||c.dataset.c===cat)?'':'none';
+  });
+}
+
+function cot(p){
+  window.open(`https://wa.me/573000000000?text=${encodeURIComponent(`Hola, quiero cotizar: *${p}*. ¿Pueden enviarme precios y disponibilidad?`)},'_blank');
+}
+
+function enviar(){
+  const n=document.querySelector('input[placeholder="Tu nombre"]').value;
+  const e=document.querySelector('input[placeholder="Organización"]').value;
+  if(!n||!e){alert('Por favor completa nombre y empresa.');return;}
+  const p=document.querySelectorAll('select')[0].value||'Varios';
+  window.open(`https://wa.me/573000000000?text=${encodeURIComponent(`Hola, soy *${n}* de *${e}*. Producto: *${p}*. Me contacto desde el sitio web.`)},'_blank');
+}
+</script>
+</body>
+</html>
