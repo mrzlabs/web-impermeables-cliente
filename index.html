@@ -760,21 +760,72 @@ footer{background:var(--ink);padding:52px 24px 24px;}
 <!-- MRZ EASTER EGG MODAL -->
 <div class="mrz-modal" id="mrzModal" onclick="closeMrz(event)">
   <div class="mrz-backdrop"></div>
-  <div class="mrz-card">
-    <div class="mrz-logo">mrz<span>labs</span></div>
-    <div class="mrz-tag">Soluciones digitales de fondo</div>
-    <p>Diseñamos y construimos infraestructura digital escalable para negocios que quieren crecer con propósito. Arquitectura progresiva, seguridad real y acompañamiento que genera resultados.</p>
+  <div class="mrz-card" style="max-width:560px;text-align:left;max-height:90svh;overflow-y:auto;">
+    <div style="text-align:center;margin-bottom:24px;">
+      <div class="mrz-logo">mrz<span>labs</span></div>
+      <div class="mrz-tag">Propuesta técnica y comercial · Ref: WEB-IMP-001</div>
+    </div>
+
+    <p style="font-size:13px;color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:24px;text-align:center;">Infraestructura digital escalable para empresas que quieren crecer con propósito. Arquitectura progresiva, seguridad real, sin amarres.</p>
+
+    <!-- FASES -->
+    <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin-bottom:12px;">Arquitectura progresiva</div>
+    <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:24px;">
+      <div style="display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:12px 14px;">
+        <span style="font-family:'Syne',sans-serif;font-size:13px;font-weight:800;color:var(--orange);flex-shrink:0;">01</span>
+        <div><div style="font-size:13px;font-weight:600;color:var(--white);margin-bottom:3px;">Presencia + captación de leads</div><div style="font-size:12px;color:rgba(255,255,255,.45);line-height:1.6;">Sitio en GitHub Pages, catálogo, Google Tag Manager + GA4, formulario → Sheets. Velocidad máxima para Google Ads.</div></div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:12px 14px;">
+        <span style="font-family:'Syne',sans-serif;font-size:13px;font-weight:800;color:var(--orange);flex-shrink:0;">02</span>
+        <div><div style="font-size:13px;font-weight:600;color:var(--white);margin-bottom:3px;">Automatización de leads</div><div style="font-size:12px;color:rgba(255,255,255,.45);line-height:1.6;">Notificaciones automáticas, Sheets como CRM básico, WhatsApp Business API, reportes mensuales.</div></div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:12px 14px;">
+        <span style="font-family:'Syne',sans-serif;font-size:13px;font-weight:800;color:var(--orange);flex-shrink:0;">03</span>
+        <div><div style="font-size:13px;font-weight:600;color:var(--white);margin-bottom:3px;">E-commerce + pasarela de pagos</div><div style="font-size:12px;color:rgba(255,255,255,.45);line-height:1.6;">Wompi o PayU sobre la misma infraestructura. PCI DSS, SSL estricto, tokenización. Solo cuando el volumen lo justifique.</div></div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:12px 14px;">
+        <span style="font-family:'Syne',sans-serif;font-size:13px;font-weight:800;color:var(--orange);flex-shrink:0;">04</span>
+        <div><div style="font-size:13px;font-weight:600;color:var(--white);margin-bottom:3px;">Portabilidad total</div><div style="font-size:12px;color:rgba(255,255,255,.45);line-height:1.6;">El sistema es del cliente. Código limpio, documentado, sobre estándares abiertos. Continúa con otro proveedor si lo requiere.</div></div>
+      </div>
+    </div>
+
+    <!-- MODELO DE COBRO -->
+    <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin-bottom:12px;">Modelo de inversión</div>
+    <div style="border:1px solid rgba(255,255,255,.08);border-radius:10px;overflow:hidden;margin-bottom:24px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.06);">
+        <span style="font-size:13px;color:rgba(255,255,255,.6);">Setup completo — Fase 1</span>
+        <span style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--white);">Pago único</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.06);">
+        <span style="font-size:13px;color:rgba(255,255,255,.6);">Contenido inicial (copy + SEO + Ads)</span>
+        <span style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--white);">Pago único</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.06);">
+        <span style="font-size:13px;color:rgba(255,255,255,.6);">Acompañamiento mensual</span>
+        <span style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--white);">Mensualidad</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 16px;">
+        <span style="font-size:13px;color:rgba(255,255,255,.6);">Fases 2 y 3</span>
+        <span style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--white);">Por hito</span>
+      </div>
+    </div>
+
+    <div style="background:rgba(249,115,22,.07);border:1px solid rgba(249,115,22,.2);border-radius:8px;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.55);line-height:1.7;margin-bottom:20px;">
+      <strong style="color:var(--white);">Sin amarres.</strong> El cliente posee el sistema. Puede continuar con otro proveedor en cualquier momento. La fidelización viene del valor entregado, no de la dependencia técnica.
+    </div>
+
+    <!-- LINKS -->
     <div class="mrz-links">
       <a class="mrz-link" href="https://github.com/mrzlabs" target="_blank">
-        <span>🐙 github.com/mrzlabs</span>
+        <span>github.com/mrzlabs</span>
         <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 11L11 3M5 3h6v6"/></svg>
       </a>
       <a class="mrz-link" href="https://wa.me/573000000000" target="_blank">
-        <span>💬 Hablemos de tu proyecto</span>
+        <span>Hablemos de tu proyecto</span>
         <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 11L11 3M5 3h6v6"/></svg>
       </a>
     </div>
-    <button class="mrz-close" onclick="closeMrz()">Cerrar</button>
+    <button class="mrz-close" style="width:100%;margin-top:8px;" onclick="closeMrz()">Cerrar</button>
   </div>
 </div>
 
